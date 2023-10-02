@@ -18,12 +18,27 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[300],
       ),
-      body: Container(
-        padding: const EdgeInsets.all(20.0),
-        margin: const EdgeInsets.all(2.0),
-        color: Colors.blueAccent,
-        child: const Text("Hello"),
+
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          const Text("Hello from Row"),
+          ElevatedButton(onPressed: () {}, child: const Icon(Icons.alarm)),
+          Container(
+            color: Colors.green,
+            padding: const EdgeInsets.all(20.0),
+            child: const Text("Hello from container"),
+          )
+        ],
       ),
+
+      // body: Container(
+      //   padding: const EdgeInsets.all(20.0),
+      //   margin: const EdgeInsets.all(2.0),
+      //   color: Colors.blueAccent,
+      //   child: const Text("Hello"),
+      // ),
 
       // body: Center(
       //   child: ElevatedButton.icon(
