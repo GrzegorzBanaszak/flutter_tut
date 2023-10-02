@@ -18,17 +18,24 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[300],
       ),
-      body: Center(
-        child: ElevatedButton.icon(
-          onPressed: () {
-            print("You click me");
-          },
-          style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all<Color>(Colors.red)),
-          icon: const Icon(Icons.home),
-          label: const Text("Click me"),
-        ),
+      body: Container(
+        padding: const EdgeInsets.all(20.0),
+        margin: const EdgeInsets.all(2.0),
+        color: Colors.blueAccent,
+        child: const Text("Hello"),
       ),
+
+      // body: Center(
+      //   child: ElevatedButton.icon(
+      //     onPressed: () {
+      //       print("You click me");
+      //     },
+      //     style: ButtonStyle(
+      //         backgroundColor: MaterialStateProperty.all<Color>(Colors.red)),
+      //     icon: const Icon(Icons.home),
+      //     label: const Text("Click me"),
+      //   ),
+      // ),
 
       // Lista obrazów
       // body: ListView(
