@@ -40,6 +40,8 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  assets:
+    - assets/
   fonts:
     - family: IndieFlower
       fonts:
