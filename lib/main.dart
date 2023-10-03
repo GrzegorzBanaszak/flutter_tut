@@ -19,11 +19,11 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[300],
       ),
 
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          const Text("Hello from Row"),
+          const Text("Hello from Column"),
           ElevatedButton(onPressed: () {}, child: const Icon(Icons.alarm)),
           Container(
             color: Colors.green,
@@ -32,6 +32,20 @@ class Home extends StatelessWidget {
           )
         ],
       ),
+
+      // body: Row(
+      //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //   crossAxisAlignment: CrossAxisAlignment.center,
+      //   children: <Widget>[
+      //     const Text("Hello from Row"),
+      //     ElevatedButton(onPressed: () {}, child: const Icon(Icons.alarm)),
+      //     Container(
+      //       color: Colors.green,
+      //       padding: const EdgeInsets.all(20.0),
+      //       child: const Text("Hello from container"),
+      //     )
+      //   ],
+      // ),
 
       // body: Container(
       //   padding: const EdgeInsets.all(20.0),
