@@ -19,19 +19,50 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[300],
       ),
 
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          const Text("Hello from Column"),
-          ElevatedButton(onPressed: () {}, child: const Icon(Icons.alarm)),
-          Container(
-            color: Colors.green,
-            padding: const EdgeInsets.all(20.0),
-            child: const Text("Hello from container"),
+      //Extended widgets
+      body: Row(
+        children: [
+          Expanded(flex: 3, child: Image.asset("assets/cat-1.jpg")),
+          Expanded(
+            flex: 3,
+            child: Container(
+              padding: const EdgeInsets.all(30.0),
+              color: Colors.cyan,
+              child: const Text("1"),
+            ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              padding: const EdgeInsets.all(30.0),
+              color: Colors.pinkAccent,
+              child: const Text("2"),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: const EdgeInsets.all(30.0),
+              color: Colors.amber,
+              child: const Text("3"),
+            ),
           )
         ],
       ),
+
+      // body: Column(
+      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //   crossAxisAlignment: CrossAxisAlignment.center,
+      //   children: <Widget>[
+      //     const Text("Hello from Column"),
+      //     ElevatedButton(onPressed: () {}, child: const Icon(Icons.alarm)),
+      //     Container(
+      //       color: Colors.green,
+      //       padding: const EdgeInsets.all(20.0),
+      //       child: const Text("Hello from container"),
+      //     )
+      //   ],
+      // ),
 
       // body: Row(
       //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
