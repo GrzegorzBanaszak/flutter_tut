@@ -13,112 +13,86 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        title: const Text("Hello"),
+        title: const Text("Ninja Id Card"),
         centerTitle: true,
-        backgroundColor: Colors.red[300],
+        backgroundColor: Colors.grey[850],
+        elevation: 0.0,
       ),
-
-      //Extended widgets
-      body: Row(
-        children: [
-          Expanded(flex: 3, child: Image.asset("assets/cat-1.jpg")),
-          Expanded(
-            flex: 3,
-            child: Container(
-              padding: const EdgeInsets.all(30.0),
-              color: Colors.cyan,
-              child: const Text("1"),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            const Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage("assets/ninja.png"),
+                radius: 40,
+                backgroundColor: Colors.white,
+              ),
             ),
-          ),
-          Expanded(
-            flex: 2,
-            child: Container(
-              padding: const EdgeInsets.all(30.0),
-              color: Colors.pinkAccent,
-              child: const Text("2"),
+            Divider(
+              height: 60.0,
+              color: Colors.grey[800],
+              thickness: 2.0,
             ),
-          ),
-          Expanded(
-            flex: 1,
-            child: Container(
-              padding: const EdgeInsets.all(30.0),
-              color: Colors.amber,
-              child: const Text("3"),
+            const Text(
+              "NAME",
+              style: TextStyle(color: Colors.grey, letterSpacing: 2.0),
             ),
-          )
-        ],
-      ),
-
-      // body: Column(
-      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      //   crossAxisAlignment: CrossAxisAlignment.center,
-      //   children: <Widget>[
-      //     const Text("Hello from Column"),
-      //     ElevatedButton(onPressed: () {}, child: const Icon(Icons.alarm)),
-      //     Container(
-      //       color: Colors.green,
-      //       padding: const EdgeInsets.all(20.0),
-      //       child: const Text("Hello from container"),
-      //     )
-      //   ],
-      // ),
-
-      // body: Row(
-      //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      //   crossAxisAlignment: CrossAxisAlignment.center,
-      //   children: <Widget>[
-      //     const Text("Hello from Row"),
-      //     ElevatedButton(onPressed: () {}, child: const Icon(Icons.alarm)),
-      //     Container(
-      //       color: Colors.green,
-      //       padding: const EdgeInsets.all(20.0),
-      //       child: const Text("Hello from container"),
-      //     )
-      //   ],
-      // ),
-
-      // body: Container(
-      //   padding: const EdgeInsets.all(20.0),
-      //   margin: const EdgeInsets.all(2.0),
-      //   color: Colors.blueAccent,
-      //   child: const Text("Hello"),
-      // ),
-
-      // body: Center(
-      //   child: ElevatedButton.icon(
-      //     onPressed: () {
-      //       print("You click me");
-      //     },
-      //     style: ButtonStyle(
-      //         backgroundColor: MaterialStateProperty.all<Color>(Colors.red)),
-      //     icon: const Icon(Icons.home),
-      //     label: const Text("Click me"),
-      //   ),
-      // ),
-
-      // Lista obrazów
-      // body: ListView(
-      //   children: <Widget>[
-      //     Image(
-      //       image: AssetImage("assets/cat-1.jpg"),
-      //     ),
-      //     Image(
-      //       image: AssetImage("assets/cat-2.jpg"),
-      //     ),
-      //     Image(
-      //       image: AssetImage("assets/cat-3.jpg"),
-      //     ),
-      //     Image.network(
-      //       "https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
-      //
-      //     ),
-      //   ],
-      // ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: Colors.red[600],
-        child: const Text("+"),
+            const SizedBox(
+              height: 10,
+            ),
+            Text(
+              "Grzegorz",
+              style: TextStyle(
+                  color: Colors.amberAccent[200],
+                  letterSpacing: 2.0,
+                  fontSize: 28.0,
+                  fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            const Text(
+              "CURRENT NINJA LEVEL",
+              style: TextStyle(color: Colors.grey, letterSpacing: 2.0),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Text(
+              "8",
+              style: TextStyle(
+                  color: Colors.amberAccent[200],
+                  letterSpacing: 2.0,
+                  fontSize: 28.0,
+                  fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Row(
+              children: <Widget>[
+                Icon(
+                  Icons.email,
+                  color: Colors.grey[400],
+                ),
+                const SizedBox(
+                  width: 10.0,
+                ),
+                Text(
+                  "grzegorz.b@mail.com",
+                  style: TextStyle(
+                      color: Colors.grey[400],
+                      fontSize: 18.0,
+                      letterSpacing: 1.0),
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
