@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tut/quote_card.dart';
 import "./quote.dart";
 
 void main() {
@@ -38,7 +39,8 @@ class _QuoteListState extends State<QuoteList> {
         backgroundColor: Colors.redAccent,
       ),
       body: Column(
-        children: quotes.map((e) => Text('${e.author} ${e.text}')).toList(),
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: quotes.map((e) => QuoteCard(quote: e)).toList(),
       ),
     );
   }
